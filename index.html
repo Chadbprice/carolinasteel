@@ -158,29 +158,53 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>
 
-<form action="https://formspree.io/f/xwvqgzzj" method="post">
-<input type="hidden" name="_subject" value="Discount Code Request">
-<label>Name: <input type="text" name="name" required></label><br>
-<label>Email: <input type="email" name="email" required></label><br>
-<button type="submit">Get fifteen percent off</button>
-</form><script>
+    
+    <div style="max-width:500px; margin:25px auto; padding:25px; border:1px solid #ccc; border-radius:10px; background:#f0f0f0; text-align:center;">
+  <p style="color:#CC0000; font-weight:bold; font-size:1.2em; animation:blink 1.5s infinite;">
+    FILL OUT FORM TO BE CONTACTED BY SALES TEAM AND RECEIVE A 15% OFF YOUR ORDER
+  </p>
+  <form action="https://formspree.io/f/xwvqgzzj" method="post" style="margin-top:20px;">
+    <input type="hidden" name="_subject" value="Discount Code Request">
+    <div style="margin-bottom:15px;">
+      <label style="display:block; font-weight:bold; color:#333; margin-bottom:5px;">Name:</label>
+      <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #999; border-radius:5px; box-sizing:border-box;">
+    </div>
+    <div style="margin-bottom:15px;">
+      <label style="display:block; font-weight:bold; color:#333; margin-bottom:5px;">Email:</label>
+      <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #999; border-radius:5px; box-sizing:border-box;">
+    </div>
+    <button type="submit" style="width:100%; padding:12px; background:#CC0000; color:white; border:none; border-radius:5px; font-size:1.1em; cursor:pointer;">
+      GET 15% OFF NOW
+    </button>
+  </form>
+</div>
+
+<style>
+@keyframes blink {
+  50% { opacity:0.4; }
+}
+</style>
+
+<script>
 let form = document.querySelector('form');
 form.addEventListener('submit', async (e) => {
-e.preventDefault();
-let res = await fetch(form.action, {
-method: 'POST',
-body: new FormData(form)
+  e.preventDefault();
+  let res = await fetch(form.action, { method:'POST', body: new FormData(form) });
+  if(res.ok) alert('Thanks! Sales will reach you soon with your code.');
 });
-if(res.ok) alert('Thanks! Code sent to your mail.');
-});
+</script>
+    
+    </section>
+
+
 </script>
  
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
 
