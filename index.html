@@ -160,12 +160,28 @@
         </div>
     </section>
 
-https://formspree.io/f/xwvqgzzj
+<form action="https://formspree.io/f/xwvqgzzj" method="post">
+<input type="hidden" name="_subject" value="Discount Code Request">
+<label>Name: <input type="text" name="name" required></label><br>
+<label>Email: <input type="email" name="email" required></label><br>
+<button type="submit">Get 15% off</button>
+</form><script>
+let form = document.querySelector('form');
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+let res = await fetch(form.action, {
+method: 'POST',
+body: new FormData(form)
+});
+if(res.ok) alert('Thanks! Code sent to your mail.');
+});
+</script>
  
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
 
