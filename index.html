@@ -70,32 +70,27 @@
       position: relative;
       overflow-x: hidden;
     }
-
-    /* American flag background – vertical, left-aligned */
     .flag-bg {
       position: fixed;
       top: 0; left: 0;
       width: 200px; height: 100vh;
       background: 
         repeating-linear-gradient(0deg, #CC0000 0px, #CC0000 20px, #fff 20px, #fff 40px) 0 0/100% 100%,
-        repeating-linear-gradient(90deg, #002147 0px, #002147 40px, #fff 40px, #fff 80px) 0 0/100% 100%;
+        linear-gradient(to bottom, #002147 0%, #002147 20%, transparent 20%) 0 0/40% 100% no-repeat;
       z-index: -1;
-      opacity: 0.08;
+      opacity: 0.1;
       pointer-events: none;
     }
-
     h1, h2 { 
       font-family: 'Oswald', sans-serif; 
-      color: #002147; /* Navy */
+      color: #002147; 
     }
-
     .header { 
       background: #002147; 
       color: #fff; 
       padding: 20px; 
       text-align: center; 
     }
-
     .main-content { 
       max-width: 1200px; 
       margin: 20px auto; 
@@ -105,7 +100,6 @@
       box-shadow: 0 0 10px rgba(0,0,0,.1); 
       position: relative;
     }
-
     .cta-button { 
       background: #CC0000; 
       color: #fff; 
@@ -116,29 +110,20 @@
       display: inline-block; 
       margin: 10px 0; 
     }
-
     .cta-button:hover { background: #990000; }
-
     .discount { 
       font-weight: bold; 
       color: #CC0000; 
       font-size: 1.1em; 
     }
-
     .carousel-item img { 
       max-height: 500px; 
       object-fit: cover; 
       margin: 0 auto; 
     }
-
     hr { 
       border: 1px solid #ddd; 
       margin: 20px 0; 
-    }
-
-    .form-note { 
-      font-size: .9em; 
-      color: #333; 
     }
   </style>
 </head>
@@ -153,11 +138,115 @@
   <section class="main-content">
     <h2>Get Your Custom Steel Building Today!</h2>
     <p class="discount">Ask for 15% OFF code</p>
-    <p>Specializing in high-quality steel structures for residential and commercial needs. 
-       <strong>No matter if you're in Texas or Tennessee—we'll hook you up.</strong></p>
+    <p>Specializing in high-quality steel structures for residential and commercial needs. <strong>No matter if you're in Texas or Tennessee—we'll hook you up.</strong></p>
     <a href="tel:864-567-8777" class="cta-button">Call or Text Chad: 864-567-8777</a>
     
     <hr>
 
+    <script>
+      gtag('config', 'AW-11390022090/HemnCKHlp-4bEMrjl7cq', {
+        'phone_conversion_number': '8645678777'
+      });
+    </script>
+    
     <h2>Our Projects</h2>
-    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="barn.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Texas">
+        </div>
+        <div class="carousel-item">
+          <img src="barn2.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Tennessee">
+        </div>
+        <div class="carousel-item">
+          <img src="barn3.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Florida">
+        </div>
+        <div class="carousel-item">
+          <img src="barn4.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Arizona">
+        </div>
+        <div class="carousel-item">
+          <img src="barn5.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Georgia">
+        </div>
+        <div class="carousel-item">
+          <img src="barn6.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Oklahoma">
+        </div>
+        <div class="carousel-item">
+          <img src="barn7.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Missouri">
+        </div>
+        <div class="carousel-item">
+          <img src="barn8.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Alabama">
+        </div>
+        <div class="carousel-item">
+          <img src="barn9.jpg" class="d-block w-100" alt="Steel Barndominium shipped to Colorado">
+        </div>
+        <div class="carousel-item">
+          <img src="barn10.jpg" class="d-block w-100" alt="Steel Barndominium shipped to California">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Lead capture form -->
+    <div style="max-width:500px; margin:25px auto; padding:25px; border:1px solid #ccc; border-radius:10px; background:#f0f0f0; text-align:center;">
+      <p style="color:#CC0000; font-weight:bold; font-size:1.2em; animation:blink 1.5s infinite;">
+        FILL OUT FORM TO BE CONTACTED BY SALES TEAM AND RECEIVE A 15% OFF YOUR ORDER
+      </p>
+      <p style="font-size:.9em; color:#555;">Chad handles builds in the Carolinas, delivers steel anywhere else—let's talk price.</p>
+      <form action="https://formspree.io/f/xwvqgzzj" method="post" style="margin-top:20px;">
+        <input type="hidden" name="_subject" value="Discount Code Request">
+        <div style="margin-bottom:15px;">
+          <label style="display:block; font-weight:bold; color:#333; margin-bottom:5px;">Name:</label>
+          <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #999; border-radius:5px; box-sizing:border-box;">
+        </div>
+        <div style="margin-bottom:15px;">
+          <label style="display:block; font-weight:bold; color:#333; margin-bottom:5px;">Email:</label>
+          <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #999; border-radius:5px; box-sizing:border-box;">
+        </div>
+        <button type="submit" style="width:100%; padding:12px; background:#CC0000; color:white; border:none; border-radius:5px; font-size:1.1em; cursor:pointer;">
+          GET 15% OFF NATIONWIDE
+        </button>
+      </form>
+    </div>
+
+    <style>
+      @keyframes blink {
+        50% { opacity:0.4; }
+      }
+    </style>
+
+    <script>
+      let form = document.querySelector('form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        let res = await fetch(form.action, { method:'POST', body: new FormData(form) });
+        if(res.ok) alert('Thanks! Sales will reach you soon with your code.');
+      });
+    </script>
+
+    <p style="text-align:center; font-size:0.9em; color:#555;">Proudly based in the Carolinas. Serving the lower forty-eight.</p>
+
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
