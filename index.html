@@ -19,8 +19,8 @@
   <meta property="og:title" content="Nationwide Steel Deals – 15% Off Barndos & Garages">
   <meta property="og:description" content="Custom steel buildings shipped to 48 states. Call Chad now for wholesale pricing.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:image" content="https://yourdomain.com/barn.jpg">
+  <meta property="og:url" content="https://yourdomain.com"> <!-- Replace with your actual domain -->
+  <meta property="og:image" content="https://yourdomain.com/barn.jpg"> <!-- Replace if needed -->
 
   <!-- Structured Data – SEO Gold -->
   <script type="application/ld+json">
@@ -91,6 +91,10 @@
       padding: 20px; 
       text-align: center; 
     }
+    .header h1 {
+      color: #fff !important; /* Force white for "Nationwide Steel Deals" */
+      margin: 0;
+    }
     .main-content { 
       max-width: 1200px; 
       margin: 20px auto; 
@@ -98,7 +102,6 @@
       background: #fff; 
       border-radius: 8px; 
       box-shadow: 0 0 10px rgba(0,0,0,.1); 
-      position: relative;
     }
     .cta-button { 
       background: #CC0000; 
@@ -234,19 +237,27 @@
     </style>
 
     <script>
-      let form = document.querySelector('form');
-      form.addEventListener('submit', async (e) => {
+      // Async form submit with success alert
+      document.querySelector('form').addEventListener('submit', async function(e) {
         e.preventDefault();
-        let res = await fetch(form.action, { method:'POST', body: new FormData(form) });
-        if(res.ok) alert('Thanks! Sales will reach you soon with your code.');
+        const form = e.target;
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        if (res.ok) {
+          alert('Thanks! Sales will reach you soon with your code.');
+          form.reset(); // Optional: clear form after success
+        } else {
+          alert('Something went wrong—try again or call directly.');
+        }
       });
     </script>
 
-    <p style="text-align:center; font-size:0.9em; color:#555;">Proudly based in the Carolinas. Serving the lower forty-eight.</p>
+    <p style="text-align:center; font-size:0.9em; color:#555; margin-top:40px;">
+      Proudly based in the Carolinas. Serving the lower forty-eight.
+    </p>
 
   </section>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap JS (bundle includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
